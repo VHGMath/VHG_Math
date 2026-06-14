@@ -1,0 +1,23 @@
+run_name: hard-verifier
+paper_name: Hard verifier
+method: hard-verifier
+question_type: integration
+objective: hard
+
+paths:
+  seed_data: data/integration_seeds.jsonl
+  output_dir: outputs/integration
+  solver_ckpt_path: ""
+
+solver_eval:
+  samples_per_problem: 10
+  visible_devices: ""
+  gpu_memory_utilization: 0.9
+  temperature: 1.0
+  top_p: null
+  max_tokens: 4096
+
+reward:
+  validity_backend: hard_symbolic
+  active_validity_metric: reference_symbolic_valid
+  active_difficulty_metric: solver_hard_verifier_pass_rate

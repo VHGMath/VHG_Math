@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "This is an anonymous review release. Please cite the associated anonymous submission during review; camera-ready citation metadata will be restored after review."
+title: "Anonymous Mathematical Reasoning Code Release"
+authors:
+  - name: Anonymous Authors
+license: Apache-2.0

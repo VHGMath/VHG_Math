@@ -1,0 +1,39 @@
+run_name: soft-verifier
+paper_name: Soft verifier
+method: soft-verifier
+domain: math
+objective: hard
+
+paths:
+  seed_data: data/general_math_seeds.jsonl
+  output_dir: outputs/general_math
+  solver_ckpt_path: ""
+  solver_visible_devices: ""
+
+generation:
+  gen_base_url: ""
+  gen_api_key: EMPTY
+  gen_model: gpt-5-nano
+  gen_max_tokens: 8192
+  concurrency: 16
+
+soft_verifier:
+  base_url: ""
+  api_key: EMPTY
+  model: ""
+  max_tokens: 512
+  max_retries: 3
+  concurrency: 256
+
+solver_eval:
+  samples_per_problem: 4
+  gpu_memory_utilization: 0.95
+  temperature: 0.7
+  top_p: 0.95
+  top_k: null
+  max_tokens: 2048
+
+reward:
+  validity_backend: soft_llm
+  active_validity_metric: verified_valid
+  active_difficulty_metric: modified_pass_rate

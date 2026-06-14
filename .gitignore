@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Local workspace metadata
+AGENTS.md
+.agents/
+.codex/
+
+# Generated experiment artifacts
+outputs/
+runs/
+logs/
+wandb/
+solver_rl/
+questioner_rl/
+checkpoints/
+ckpts/
+*.log
+*.jsonl.tmp
+*.parquet
+*.pt
+*.pth
+*.safetensors
